@@ -212,7 +212,7 @@ a:hover, a:focus {
     top: -40px;
     left: 0;
     background: var(--color-primary);
-    color: white;
+    color: #000000;
     padding: var(--spacing-xs) var(--spacing-sm);
     text-decoration: none;
     z-index: 100;
@@ -538,16 +538,16 @@ section h2::after {
 
 .project-section {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    color: white;
+    color: #000000;
     text-align: center;
 }
 
 .project-section h2 {
-    color: white;
+    color: #000000;
 }
 
 .project-section .lead {
-    color: rgba(255, 255, 255, 0.95);
+    color: #000000;
 }
 
 .project-formats {
