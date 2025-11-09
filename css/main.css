@@ -635,11 +635,17 @@ section h2::after {
     color: var(--color-dark);
     margin-bottom: var(--spacing-sm);
     font-size: 1.3rem;
+    text-shadow:
+        0 0 15px rgba(216, 150, 255, 0.4),
+        0 0 30px rgba(216, 150, 255, 0.2);
 }
 
 .module-card p {
     color: var(--color-text-light);
     flex-grow: 1;
+    text-shadow:
+        0 0 12px rgba(255, 143, 186, 0.3),
+        0 0 25px rgba(255, 143, 186, 0.15);
 }
 
 .module-meta {
