@@ -131,21 +131,58 @@
                         interventions in feminist science and technology studies.
                     </p>
 
-                    <div class="timeline-preview">
-                        <div class="embed-placeholder">
-                            [Interactive Timeline - Click through 1970s-present]
-                            <br><br>
-                            Featured Moments:
-                            <ul style="text-align: left; max-width: 500px; margin: 1rem auto;">
-                                <li>1970s: Early feminist critiques of science (Keller, Harding)</li>
-                                <li>1985: Haraway's Cyborg Manifesto</li>
-                                <li>1990s: Cyberfeminism emerges (VNS Matrix, Sadie Plant)</li>
-                                <li>2000s: Web 2.0 and feminist digital labor debates</li>
-                                <li>2010s: Algorithmic bias becomes visible</li>
-                                <li>2020s: AI ethics, design justice, data feminism</li>
-                            </ul>
+                    <div class="timeline-container" id="feministTimeline">
+                        <div class="timeline-navigation">
+                            <button class="timeline-nav-btn" id="timelinePrev" aria-label="Previous era">← Previous</button>
+                            <div class="timeline-progress">
+                                <span id="timelineCounter">1 / 6</span>
+                            </div>
+                            <button class="timeline-nav-btn" id="timelineNext" aria-label="Next era">Next →</button>
                         </div>
-                        <a href="#" class="btn btn-primary">Launch Interactive Timeline</a>
+
+                        <div class="timeline-content" id="timelineContent">
+                            <div class="timeline-item active" data-index="0">
+                                <div class="timeline-year">1970s</div>
+                                <h4>Early Feminist Critiques of Science</h4>
+                                <p>Evelyn Fox Keller and Sandra Harding challenge the myth of scientific objectivity, arguing that knowledge is always situated and shaped by gender, power, and positionality.</p>
+                                <p><strong>Key Texts:</strong> Keller's "Gender and Science" (1978), Harding's "The Science Question in Feminism" (1986)</p>
+                            </div>
+
+                            <div class="timeline-item" data-index="1">
+                                <div class="timeline-year">1985</div>
+                                <h4>Haraway's Cyborg Manifesto</h4>
+                                <p>Donna Haraway publishes "A Cyborg Manifesto," proposing the cyborg as a figuration that breaks down binaries between human/machine, nature/culture, and opens new political possibilities beyond identity politics.</p>
+                                <p><strong>Key Concept:</strong> Situated knowledges, partial perspectives, irony over innocence</p>
+                            </div>
+
+                            <div class="timeline-item" data-index="2">
+                                <div class="timeline-year">1990s</div>
+                                <h4>Cyberfeminism Emerges</h4>
+                                <p>Artist collectives like VNS Matrix and theorists like Sadie Plant explore feminist futures in cyberspace. The internet is imagined as a space of possibility for gender fluidity and resistance to patriarchal structures.</p>
+                                <p><strong>Key Works:</strong> VNS Matrix's "Cyberfeminist Manifesto for the 21st Century" (1991), Plant's "Zeros + Ones" (1997)</p>
+                            </div>
+
+                            <div class="timeline-item" data-index="3">
+                                <div class="timeline-year">2000s</div>
+                                <h4>Web 2.0 and Feminist Digital Labor Debates</h4>
+                                <p>The rise of social media platforms prompts feminist scholars to analyze the gendered dynamics of digital labor, affective labor, and platform capitalism. Questions about who benefits from user-generated content become central.</p>
+                                <p><strong>Key Themes:</strong> Immaterial labor, precarity, digital domesticity</p>
+                            </div>
+
+                            <div class="timeline-item" data-index="4">
+                                <div class="timeline-year">2010s</div>
+                                <h4>Algorithmic Bias Becomes Visible</h4>
+                                <p>Scholars like Safiya Noble and Joy Buolamwini expose how algorithms perpetuate racism and sexism. The "black box" of AI is opened to reveal discriminatory training data and design choices.</p>
+                                <p><strong>Key Works:</strong> Noble's "Algorithms of Oppression" (2018), Buolamwini's "Gender Shades" project (2018)</p>
+                            </div>
+
+                            <div class="timeline-item" data-index="5">
+                                <div class="timeline-year">2020s</div>
+                                <h4>AI Ethics, Design Justice, Data Feminism</h4>
+                                <p>Intersectional frameworks shape conversations about AI ethics, algorithmic accountability, and design justice. Scholars advocate for community-driven design, data sovereignty, and abolitionist approaches to technology.</p>
+                                <p><strong>Key Frameworks:</strong> Design Justice (Costanza-Chock), Data Feminism (D'Ignazio & Klein), Abolitionist tools</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -237,5 +274,6 @@
     <script src="../js/navigation.js"></script>
     <script src="../js/progress-tracker.js"></script>
     <script src="../js/accessibility-controls.js"></script>
+    <script src="../js/timeline.js"></script>
 </body>
 </html>
