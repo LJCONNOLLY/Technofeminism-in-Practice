@@ -1,0 +1,313 @@
+/* ===================================
+   Accessibility Controls Stylesheet
+   Technofeminisms in Practice
+   =================================== */
+
+/* ===================================
+   Accessibility Panel
+   =================================== */
+
+.accessibility-controls {
+    position: fixed;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    z-index: 1000;
+    background: var(--color-background);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+}
+
+#toggle-accessibility {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    transition: background var(--transition-fast);
+}
+
+#toggle-accessibility:hover,
+#toggle-accessibility:focus {
+    background: var(--color-secondary);
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+#accessibility-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    background: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    min-width: 200px;
+}
+
+#accessibility-options.hidden {
+    display: none;
+}
+
+#accessibility-options button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    transition: all var(--transition-fast);
+    text-align: left;
+    color: var(--color-text);
+}
+
+#accessibility-options button:hover,
+#accessibility-options button:focus {
+    background: var(--color-primary);
+    color: white;
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.theme-icon {
+    margin-right: var(--spacing-xs);
+}
+
+/* ===================================
+   Focus Indicators
+   =================================== */
+
+*:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users, keep for keyboard */
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* ===================================
+   Screen Reader Only Content
+   =================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===================================
+   Reduced Motion
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===================================
+   High Contrast Mode Adjustments
+   =================================== */
+
+body.high-contrast .module-card {
+    border-width: 3px;
+}
+
+body.high-contrast .btn {
+    border-width: 3px;
+}
+
+body.high-contrast a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* ===================================
+   Dark Mode Specific Adjustments
+   =================================== */
+
+body.dark-mode .site-header {
+    background: linear-gradient(135deg, #3A2A5A 0%, #8B4E6A 100%);
+}
+
+body.dark-mode .project-section {
+    background: linear-gradient(135deg, #4A3A6A 0%, #9B5E7A 100%);
+}
+
+body.dark-mode .module-card {
+    background: var(--color-surface);
+}
+
+body.dark-mode .about-card,
+body.dark-mode .collab-card {
+    background: var(--color-surface);
+}
+
+body.dark-mode .theorist-card {
+    background: var(--color-surface);
+}
+
+body.dark-mode .theorist-card:hover {
+    background: var(--color-background);
+}
+
+/* ===================================
+   Keyboard Navigation Enhancements
+   =================================== */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* ===================================
+   Mobile Accessibility
+   =================================== */
+
+@media (max-width: 768px) {
+    .accessibility-controls {
+        top: auto;
+        bottom: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+
+    #accessibility-options {
+        bottom: 100%;
+        margin-bottom: var(--spacing-xs);
+    }
+}
+
+/* ===================================
+   Color Blind Friendly Patterns
+   =================================== */
+
+/* Adding texture/patterns for colorblind users */
+.module-card.week-intro::after,
+.module-card.week-conclusion::after {
+    content: '●';
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+    font-size: 2rem;
+    color: var(--color-accent);
+    opacity: 0.3;
+}
+
+.module-card.theme-algorithms::after {
+    content: '■';
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+    font-size: 1.5rem;
+    color: var(--color-algorithms);
+    opacity: 0.3;
+}
+
+.module-card.theme-infrastructure::after {
+    content: '▲';
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+    font-size: 1.5rem;
+    color: var(--color-infrastructure);
+    opacity: 0.3;
+}
+
+.module-card.theme-project::after {
+    content: '★';
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+    font-size: 1.5rem;
+    color: var(--color-project);
+    opacity: 0.3;
+}
+
+/* ===================================
+   Touch Target Sizes (Mobile)
+   =================================== */
+
+@media (pointer: coarse) {
+    .btn,
+    a,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ===================================
+   Font Loading
+   =================================== */
+
+/* Prevent FOIT (Flash of Invisible Text) */
+@font-face {
+    font-display: swap;
+}
+
+/* ===================================
+   Back to Top Button
+   =================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 50px;
+    height: 50px;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+    z-index: 999;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background: var(--color-secondary);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: var(--spacing-sm);
+        right: var(--spacing-sm);
+        width: 45px;
+        height: 45px;
+    }
+}

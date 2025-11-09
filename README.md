@@ -1,0 +1,194 @@
+# Technofeminisms in Practice: Interactive Syllabus
+
+An interactive, accessible, web-based syllabus for a graduate seminar on technofeminism. This project demonstrates how course materials can be designed with feminist principles: accessible, non-hierarchical, collaborative, and transparent.
+
+## 🌟 Features
+
+- **14-Week Interactive Curriculum** covering feminist STS, algorithmic bias, embodied interaction, data colonialism, and design justice
+- **Accessibility-First Design** with WCAG 2.1 AA compliance, dark/light modes, keyboard navigation, and screen reader support
+- **Progress Tracking** using localStorage to monitor student completion
+- **Multiple Format Options** for assignments (written, audio, video, zine)
+- **Collaborative Learning Spaces** with embedded tools (Padlet, Google Docs, Miro, Google Forms)
+- **Responsive Design** works on desktop, tablet, and mobile devices
+- **Open Source** under Creative Commons BY-NC-SA 4.0
+
+## 📁 Project Structure
+
+```
+/
+├── index.html              # Landing page with course overview
+├── weeks/                  # 14 weekly module pages
+│   ├── week01.html
+│   ├── week02.html
+│   └── ...
+├── css/
+│   ├── main.css           # Core styles with technofeminist design
+│   ├── accessibility.css   # Accessibility features
+│   └── modules.css        # Week page specific styles
+├── js/
+│   ├── navigation.js       # Smooth scrolling, keyboard nav
+│   ├── progress-tracker.js # LocalStorage-based progress
+│   └── accessibility-controls.js # Theme, font size, contrast
+├── resources/
+│   ├── glossary.html      # Key terms and concepts
+│   ├── readings.html      # Complete reading list
+│   └── collaboration.html # Collaboration tools guide
+├── assets/
+│   ├── images/
+│   ├── data/
+│   └── embeds/
+├── CLAUDE.md              # Development guidance
+└── README.md              # This file
+```
+
+## 🚀 Getting Started
+
+### Viewing the Site
+
+1. Clone this repository
+2. Open `index.html` in a web browser
+3. Navigate through modules using the homepage or week navigation
+
+### For Instructors: Customizing the Syllabus
+
+1. **Update Readings**: Edit reading lists in each `weeks/weekXX.html` file
+2. **Add Collaboration Tools**:
+   - Create Padlet boards, Google Docs, Miro boards
+   - Replace placeholder links in week pages and `resources/collaboration.html`
+3. **Modify Content**: All content is in standard HTML files—edit directly
+4. **Add Resources**: Expand `resources/glossary.html` and `resources/readings.html`
+5. **Configure Uploads**: Set up Google Forms with file upload for multimodal reflections
+
+### Deploying to GitHub Pages
+
+1. Push repository to GitHub
+2. Go to Settings > Pages
+3. Select branch (usually `main`) and root directory
+4. Site will be published at `https://[username].github.io/[repository-name]/`
+
+## 🎨 Design Principles
+
+This syllabus embodies technofeminist design principles:
+
+### Accessibility
+- **WCAG 2.1 AA compliant** with proper heading hierarchy, ARIA labels, alt text
+- **Dark/light mode** toggle respects system preferences
+- **Adjustable font sizes** (normal, large, x-large)
+- **High contrast mode** for visual accessibility
+- **Keyboard navigation** throughout, including arrow key navigation for modules
+- **Screen reader friendly** with proper semantic HTML and announcements
+- **Reduced motion** support for users with vestibular disorders
+
+### Inclusivity
+- **Multiple format options** for all assignments (text, audio, video, visual)
+- **Non-stereotyped color palette** avoiding gendered color associations
+- **Colorblind-friendly** with patterns/shapes in addition to color
+- **Mobile-responsive** acknowledges diverse device access
+
+### Non-Hierarchical
+- **Non-linear navigation** allows students to explore in their own order
+- **Multiple entry points** to content
+- **Peer collaboration** emphasized over instructor-centrism
+
+### Transparency
+- **Open source code** visible on GitHub
+- **Clear data practices** (what's stored in localStorage)
+- **Visible labor** with credits and acknowledgments
+- **No tracking** beyond local progress storage
+
+## 🛠️ Technology Stack
+
+- **HTML5** semantic markup
+- **CSS3** with CSS Grid, custom properties, and responsive design
+- **Vanilla JavaScript** (no frameworks) for maximum compatibility
+- **LocalStorage** for client-side progress tracking
+- **No build process** simple, direct deployment
+
+## 📚 Course Content
+
+### Week-by-Week Overview
+
+1. **Week 1**: Introductions & Foundations (light)
+2. **Week 2**: Haraway's Cyborgs & Situated Knowledges
+3. **Week 3**: Standpoint Theory & Intersectionality
+4. **Week 4**: Embodied Interaction
+5. **Week 5**: Algorithms of Oppression (with search audit case study)
+6. **Week 6**: Automating Inequality
+7. **Week 7**: Coded Bias (with documentary)
+8. **Week 8**: Platform Capitalism & Gendered Labor
+9. **Week 9**: Data Colonialism & Surveillance
+10. **Week 10**: AI Ethics & Accountability (with branching narrative)
+11. **Week 11**: Platform Audit Workshops
+12. **Week 12**: Presenting Findings
+13. **Week 13**: Reimagining - Design Justice
+14. **Week 14**: Building Technofeminist Futures (light)
+
+### Key Theorists
+
+Donna Haraway • Safiya Noble • Ruha Benjamin • Virginia Eubanks • Joy Buolamwini • Sasha Costanza-Chock • Legacy Russell • Mar Hicks • Lisa Nakamura • Wendy Chun • and more
+
+## 🔧 Customization Guide
+
+### Changing Colors
+
+Edit CSS custom properties in `/css/main.css`:
+
+```css
+:root {
+    --color-primary: #6B4E9C;
+    --color-secondary: #D4758A;
+    --color-accent: #F4A261;
+    /* ... */
+}
+```
+
+### Adding New Weeks
+
+1. Copy an existing week HTML file (e.g., `week02.html`)
+2. Update week number, title, and content
+3. Add link to `index.html` modules grid
+4. Update navigation links in adjacent weeks
+
+### Embedding Collaboration Tools
+
+Replace placeholder links with actual URLs:
+- **Padlet**: Create boards at padlet.com
+- **Google Docs**: Share with "Anyone with link can edit"
+- **Miro**: Generate shareable board link
+- **Google Forms**: Create form with file upload enabled
+
+## 🤝 Contributing
+
+This is an educational resource designed to be adapted and improved. Suggestions for:
+- Additional readings or resources
+- Accessibility improvements
+- Interactive elements
+- Case studies
+- Bug fixes
+
+...are welcome! Please open an issue or submit a pull request.
+
+## 📄 License
+
+This work is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+You are free to:
+- **Share** — copy and redistribute the material
+- **Adapt** — remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** — give appropriate credit
+- **NonCommercial** — not for commercial purposes
+- **ShareAlike** — distribute under same license
+
+## 🙏 Acknowledgments
+
+This syllabus builds on the intellectual labor of feminist scholars, activists, and practitioners who have shaped technofeminist thought and practice. Deep gratitude to the theorists, organizers, and communities whose work makes this possible.
+
+## 📞 Contact
+
+For questions about using or adapting this syllabus, please open an issue on GitHub.
+
+---
+
+**Built with feminist principles: accessible, inclusive, collaborative, and transparent.**
