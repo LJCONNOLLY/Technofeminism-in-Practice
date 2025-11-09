@@ -35,11 +35,11 @@
     --font-secondary: 'Times New Roman', Times, serif;
     --font-mono: 'Courier New', Courier, monospace;
 
-    --font-size-base: 18px;
-    --font-size-small: 16px;
-    --font-size-large: 20px;
-    --line-height-base: 1.7;
-    --line-height-tight: 1.4;
+    --font-size-base: 22px;
+    --font-size-small: 19px;
+    --font-size-large: 26px;
+    --line-height-base: 1.8;
+    --line-height-tight: 1.5;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -49,7 +49,7 @@
     --spacing-xl: 4rem;
 
     /* Layout */
-    --container-width: 1600px;
+    --container-width: 90%;
     --border-radius: 0px;
     --shadow-sm: 0 0 10px rgba(255, 107, 157, 0.3), 0 0 20px rgba(181, 101, 216, 0.2);
     --shadow-md: 0 0 15px rgba(255, 107, 157, 0.4), 0 0 30px rgba(181, 101, 216, 0.3);
@@ -183,12 +183,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.3rem; }
+h6 { font-size: 1.1rem; }
 
 p {
     margin-bottom: var(--spacing-sm);
@@ -226,7 +226,7 @@ a:hover, a:focus {
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
+    padding: 0 0.5rem;
 }
 
 /* ===================================
