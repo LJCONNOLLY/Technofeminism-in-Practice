@@ -332,11 +332,26 @@ a:hover, a:focus {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero h2 {
     color: var(--color-primary);
     margin-bottom: var(--spacing-md);
+    position: relative;
+    display: inline-block;
+    padding: var(--spacing-md);
+    text-shadow:
+        0 0 20px rgba(216, 150, 255, 0.8),
+        0 0 40px rgba(216, 150, 255, 0.6),
+        0 0 60px rgba(216, 150, 255, 0.4);
+    background: radial-gradient(ellipse at center, rgba(216, 150, 255, 0.2) 0%, transparent 70%);
+    box-shadow:
+        0 0 80px rgba(216, 150, 255, 0.6),
+        0 0 120px rgba(216, 150, 255, 0.4),
+        inset 0 0 60px rgba(216, 150, 255, 0.2);
 }
 
 .lead {
