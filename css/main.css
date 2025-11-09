@@ -740,6 +740,9 @@ section h2::after {
 .collab-card h3 {
     color: var(--color-primary);
     margin-bottom: var(--spacing-sm);
+    text-shadow:
+        0 0 15px rgba(216, 150, 255, 0.6),
+        0 0 30px rgba(216, 150, 255, 0.3);
 }
 
 .collab-card .btn {
