@@ -10,34 +10,34 @@
 
 /* CSS Custom Properties (Variables) */
 :root {
-    /* Color Palette - Space navy background with white text, pink/purple accents */
-    --color-primary: #B565D8;        /* Bright purple */
-    --color-secondary: #FF6B9D;      /* Bright pink */
+    /* Color Palette - High contrast: Pure black background with white text, bright pink/purple accents */
+    --color-primary: #D896FF;        /* Bright light purple */
+    --color-secondary: #FF8FBA;      /* Bright light pink */
     --color-accent: #C77DFF;         /* Light purple */
     --color-neon-pink: #FF2A6D;      /* Neon pink */
     --color-neon-purple: #D946EF;    /* Neon purple */
     --color-neon-cyan: #05D9E8;      /* Cyber cyan */
     --color-dark: #FFFFFF;           /* White (for dark bg) */
-    --color-light: #0B1426;          /* Dark navy */
+    --color-light: #000000;          /* Pure black */
     --color-text: #FFFFFF;           /* White text */
     --color-text-light: #CCCCCC;     /* Light gray text */
-    --color-background: #0B1426;     /* Dark navy blue (space-like) */
-    --color-surface: #131F3A;        /* Slightly lighter navy surface */
-    --color-border: #FF6B9D;         /* Pink border */
+    --color-background: #000000;     /* Pure black background */
+    --color-surface: #0A0A0A;        /* Almost black surface */
+    --color-border: #FFFFFF;         /* White border */
 
     /* Theme colors */
-    --color-algorithms: #B565D8;     /* Purple */
-    --color-infrastructure: #9D4EDD; /* Deep purple */
-    --color-project: #FF6B9D;        /* Pink */
+    --color-algorithms: #D896FF;     /* Bright purple */
+    --color-infrastructure: #D896FF; /* Bright purple */
+    --color-project: #FF8FBA;        /* Bright pink */
 
     /* Typography */
     --font-primary: 'Times New Roman', Times, serif;
     --font-secondary: 'Times New Roman', Times, serif;
     --font-mono: 'Courier New', Courier, monospace;
 
-    --font-size-base: 28px;
-    --font-size-small: 24px;
-    --font-size-large: 32px;
+    --font-size-base: 24px;
+    --font-size-small: 20px;
+    --font-size-large: 28px;
     --line-height-base: 1.8;
     --line-height-tight: 1.5;
 
@@ -183,12 +183,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-h1 { font-size: 4rem; }
-h2 { font-size: 3.2rem; }
-h3 { font-size: 2.4rem; }
-h4 { font-size: 2rem; }
-h5 { font-size: 1.7rem; }
-h6 { font-size: 1.4rem; }
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2.2rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.3rem; }
 
 p {
     margin-bottom: var(--spacing-sm);
