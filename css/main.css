@@ -46,7 +46,7 @@
     --spacing-xl: 4rem;
 
     /* Layout */
-    --container-width: 1200px;
+    --container-width: 1600px;
     --border-radius: 8px;
     --shadow-sm: 0 2px 8px rgba(181, 101, 216, 0.2);
     --shadow-md: 0 4px 12px rgba(181, 101, 216, 0.3);
@@ -179,7 +179,7 @@ a:hover, a:focus {
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    padding: 0 var(--spacing-sm);
 }
 
 /* ===================================
