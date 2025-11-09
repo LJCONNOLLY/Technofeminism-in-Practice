@@ -10,22 +10,22 @@
 
 /* CSS Custom Properties (Variables) */
 :root {
-    /* Color Palette - Warm, inclusive, high contrast */
-    --color-primary: #6B4E9C;        /* Deep purple */
-    --color-secondary: #D4758A;      /* Warm rose */
-    --color-accent: #F4A261;         /* Warm orange */
-    --color-dark: #2D3142;           /* Charcoal */
-    --color-light: #F8F9FA;          /* Off-white */
-    --color-text: #2D3142;
-    --color-text-light: #5A5A5A;
-    --color-background: #FFFFFF;
-    --color-surface: #F8F9FA;
-    --color-border: #E0E0E0;
+    /* Color Palette - Black background with white text, pink/purple accents */
+    --color-primary: #B565D8;        /* Bright purple */
+    --color-secondary: #FF6B9D;      /* Bright pink */
+    --color-accent: #C77DFF;         /* Light purple */
+    --color-dark: #FFFFFF;           /* White (for dark bg) */
+    --color-light: #000000;          /* Black */
+    --color-text: #FFFFFF;           /* White text */
+    --color-text-light: #CCCCCC;     /* Light gray text */
+    --color-background: #000000;     /* Black background */
+    --color-surface: #1A1A1A;        /* Dark gray surface */
+    --color-border: #333333;         /* Dark border */
 
     /* Theme colors */
-    --color-algorithms: #8B5FBF;
-    --color-infrastructure: #5F9EA0;
-    --color-project: #D4758A;
+    --color-algorithms: #B565D8;     /* Purple */
+    --color-infrastructure: #9D4EDD; /* Deep purple */
+    --color-project: #FF6B9D;        /* Pink */
 
     /* Typography */
     --font-primary: 'Georgia', 'Times New Roman', serif;
@@ -48,38 +48,48 @@
     /* Layout */
     --container-width: 1200px;
     --border-radius: 8px;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+    --shadow-sm: 0 2px 8px rgba(181, 101, 216, 0.2);
+    --shadow-md: 0 4px 12px rgba(181, 101, 216, 0.3);
+    --shadow-lg: 0 10px 30px rgba(181, 101, 216, 0.4);
 
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
 }
 
-/* Dark Mode Variables */
+/* Light Mode Variables (toggle to light theme) */
 body.dark-mode {
-    --color-background: #1A1A2E;
-    --color-surface: #252540;
-    --color-text: #E0E0E0;
-    --color-text-light: #B0B0B0;
-    --color-border: #3A3A5A;
-    --color-dark: #E0E0E0;
-    --color-light: #2D3142;
+    --color-primary: #6B4E9C;
+    --color-secondary: #D4758A;
+    --color-accent: #F4A261;
+    --color-background: #FFFFFF;
+    --color-surface: #F8F9FA;
+    --color-text: #2D3142;
+    --color-text-light: #5A5A5A;
+    --color-border: #E0E0E0;
+    --color-dark: #2D3142;
+    --color-light: #F8F9FA;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* High Contrast Mode */
 body.high-contrast {
+    --color-primary: #D896FF;
+    --color-secondary: #FF8FBA;
+    --color-text: #FFFFFF;
+    --color-background: #000000;
+    --color-border: #FFFFFF;
+    --color-surface: #0A0A0A;
+}
+
+body.high-contrast.dark-mode {
     --color-primary: #5A3D8A;
     --color-secondary: #C24D6A;
     --color-text: #000000;
     --color-background: #FFFFFF;
     --color-border: #000000;
-}
-
-body.high-contrast.dark-mode {
-    --color-text: #FFFFFF;
-    --color-background: #000000;
 }
 
 /* ===================================

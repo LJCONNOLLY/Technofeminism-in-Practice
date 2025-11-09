@@ -10,7 +10,7 @@
 
     // State management
     const state = {
-        theme: localStorage.getItem('theme') || 'light',
+        theme: localStorage.getItem('theme') || 'dark',
         fontSize: localStorage.getItem('fontSize') || 'normal',
         highContrast: localStorage.getItem('highContrast') === 'true'
     };
@@ -175,19 +175,20 @@
      * Detect system preferences
      */
     function detectSystemPreferences() {
-        // Detect system dark mode preference if no user preference set
+        // Detect system light mode preference if no user preference set
+        // Note: Our default is dark, so we only need to check if user prefers light
         if (!localStorage.getItem('theme')) {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (prefersDark) {
-                state.theme = 'dark';
+            const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (prefersLight) {
+                state.theme = 'light';
                 applyTheme();
             }
         }
 
         // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function(e) {
             if (!localStorage.getItem('theme')) {
-                state.theme = e.matches ? 'dark' : 'light';
+                state.theme = e.matches ? 'light' : 'dark';
                 applyTheme();
             }
         });

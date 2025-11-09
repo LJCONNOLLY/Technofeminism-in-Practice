@@ -146,24 +146,27 @@ body.high-contrast a {
 }
 
 /* ===================================
-   Dark Mode Specific Adjustments
+   Light Mode Specific Adjustments
+   Note: "dark-mode" class now toggles TO light mode
+   since default is dark background
    =================================== */
 
 body.dark-mode .site-header {
-    background: linear-gradient(135deg, #3A2A5A 0%, #8B4E6A 100%);
+    background: linear-gradient(135deg, #6B4E9C 0%, #D4758A 100%);
 }
 
 body.dark-mode .project-section {
-    background: linear-gradient(135deg, #4A3A6A 0%, #9B5E7A 100%);
+    background: linear-gradient(135deg, #6B4E9C 0%, #D4758A 100%);
 }
 
 body.dark-mode .module-card {
-    background: var(--color-surface);
+    background: var(--color-background);
+    border-color: var(--color-border);
 }
 
 body.dark-mode .about-card,
 body.dark-mode .collab-card {
-    background: var(--color-surface);
+    background: var(--color-background);
 }
 
 body.dark-mode .theorist-card {
