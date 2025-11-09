@@ -344,9 +344,8 @@ a:hover, a:focus {
     display: inline-block;
     padding: var(--spacing-md);
     text-shadow:
-        0 0 20px rgba(216, 150, 255, 0.8),
-        0 0 40px rgba(216, 150, 255, 0.6),
-        0 0 60px rgba(216, 150, 255, 0.4);
+        0 0 8px rgba(216, 150, 255, 0.3),
+        0 0 15px rgba(216, 150, 255, 0.2);
     background: radial-gradient(ellipse at center, rgba(216, 150, 255, 0.2) 0%, transparent 70%);
     box-shadow:
         0 0 80px rgba(216, 150, 255, 0.6),
