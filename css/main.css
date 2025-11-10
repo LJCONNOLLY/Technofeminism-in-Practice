@@ -790,7 +790,7 @@ section h2::after {
    =================================== */
 
 .site-footer {
-    background: var(--color-neon-pink);
+    background: #FFB3D9;
     color: #000000;
     padding: var(--spacing-lg) 0 var(--spacing-md);
     margin-top: var(--spacing-xl);
