@@ -508,15 +508,16 @@ td.icon {
 
 .schedule-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: baseline;
     flex-wrap: wrap;
-    gap: var(--spacing-xs) var(--spacing-sm);
+    gap: var(--spacing-xs) var(--spacing-md);
     padding: var(--spacing-sm) 0;
     border-bottom: 1px solid var(--color-border);
 }
 
 .schedule-item a {
+    flex: 0 1 auto;
     font-weight: 700;
     font-size: 1.1rem;
     text-decoration: none;
@@ -528,15 +529,23 @@ td.icon {
 }
 
 .schedule-date {
+    flex: 0 0 auto;
+    width: 4.5rem;
     color: var(--color-text-light);
     font-size: var(--font-size-small);
     white-space: nowrap;
 }
 
 .schedule-tag {
+    flex: 0 0 auto;
     font-size: var(--font-size-small);
     color: var(--color-accent);
     font-weight: 700;
+}
+
+.schedule-item .completion-checkbox {
+    flex: 0 0 auto;
+    margin-left: auto;
 }
 
 .schedule-item.completed a::after {
