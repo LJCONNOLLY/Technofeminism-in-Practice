@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/accessibility.css">
     <link rel="stylesheet" href="../css/modules.css">
 </head>
-<body>
+<body data-schedule-url="../schedule.html" data-prev-url="week04.html" data-next-url="week06.html">
     <div id="accessibility-panel" class="accessibility-controls">
         <button id="toggle-accessibility" aria-label="Toggle accessibility controls">
             <span aria-hidden="true">♿</span> Accessibility
@@ -24,84 +24,57 @@
         </div>
     </div>
 
-    <header class="site-header">
-        <div class="container">
-            <h1 class="course-title">
-                <a href="../index.html" style="color: white; text-decoration: none;">Technofeminisms in Practice</a>
-            </h1>
-            <nav aria-label="Main navigation">
-                <ul class="main-nav">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#modules">All Modules</a></li>
-                    <li><a href="../index.html#project">Signature Project</a></li>
-                    <li><a href="../resources/readings.html">Resources</a></li>
-                    <li><a href="../resources/glossary.html">Glossary</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="page-shell">
+        <p class="site-subtitle">WST 6905 course syllabus &mdash; Fall 2026</p>
 
-    <main id="main-content" class="week-page">
-        <div class="container">
-            <div class="week-header">
-                <span class="week-number">Week 5 &middot; Sep 22</span>
-                <h2>Algorithms of Oppression</h2>
-                <p class="week-subtitle">Search, visibility, and racialized results.</p>
+        <div class="page-body">
+        <nav class="sidebar-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="active"><a href="../schedule.html">Weekly Schedule</a></li>
+                <li><a href="../requirements.html">Course Requirements</a></li>
+                <li><a href="../resources/readings.html">Readings</a></li>
+                <li><a href="../resources/glossary.html">Glossary</a></li>
+                <li><a href="../resources/collaboration.html">Collaborate</a></li>
+            </ul>
+        </nav>
 
-                <div class="week-meta">
-                    <span class="meta-item">1 reading (2 chapters)</span>
+        <div class="column">
+        <main id="main-content">
+            <p class="unit-meta">Week 5 &middot; Sep 22</p>
+            <h1>Algorithms of Oppression</h1>
+            <p class="lead">Search, visibility, and racialized results.</p>
+
+            <h2>Readings</h2>
+            <div class="readings-list">
+                <div class="reading-item">
+                    <h4>Noble, Safiya Umoja. <em>Algorithms of Oppression</em>, Ch. 1 and Ch. 3.</h4>
+                    <p class="reading-note">Available via course reserves.</p>
                 </div>
             </div>
 
-            <nav class="week-nav" aria-label="Week navigation">
-                <a href="week04.html" class="nav-link">← Week 4</a>
-                <a href="../index.html#modules" class="nav-link">All Modules</a>
-                <a href="week06.html" class="nav-link">Week 6 →</a>
-            </nav>
-
-            <section class="module-section">
-                <h3>Overview</h3>
-                <p>
-                    Search, visibility, and racialized results.
-                </p>
-            </section>
-
-            <section class="module-section">
-                <h3>📚 Readings</h3>
-                <div class="readings-list">
-                    <div class="reading-item">
-                        <h4>Noble, Safiya Umoja. <em>Algorithms of Oppression</em>, Ch. 1 and Ch. 3.</h4>
-                        <p class="reading-note">Available via course reserves.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="module-section assignment-section">
-                <h3>Reading Response Due</h3>
+            <div class="assignment-section">
+                <h3 style="margin-top:0;">Reading Response Due</h3>
                 <div class="assignment-card">
                     <p>
                         Post a short written response (300&ndash;500 words) before class, plus come
                         prepared for active participation in seminar discussion.
                     </p>
                 </div>
-            </section>
+            </div>
 
-            <nav class="week-nav week-nav-bottom" aria-label="Week navigation">
-                <a href="week04.html" class="nav-link">← Week 4</a>
-                <a href="../index.html#modules" class="nav-link">All Modules</a>
-                <a href="week06.html" class="nav-link">Week 6 →</a>
+            <nav class="unit-pagination" aria-label="Week navigation">
+                <a href="week04.html" class="prev">&larr; Week 4</a>
+                <a href="week06.html" class="next">Week 6 &rarr;</a>
+                <a href="../schedule.html" class="index">Weekly Schedule</a>
             </nav>
+        </main>
         </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Technofeminisms in Practice | <a href="../index.html">Home</a></p>
         </div>
-    </footer>
+    </div>
 
     <script src="../js/navigation.js"></script>
-    <script src="../js/progress-tracker.js"></script>
+    <script src="../js/pagination.js"></script>
     <script src="../js/accessibility-controls.js"></script>
 </body>
 </html>

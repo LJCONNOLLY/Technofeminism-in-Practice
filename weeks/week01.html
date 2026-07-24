@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/accessibility.css">
     <link rel="stylesheet" href="../css/modules.css">
 </head>
-<body>
+<body data-schedule-url="../schedule.html" data-next-url="week02.html">
     <div id="accessibility-panel" class="accessibility-controls">
         <button id="toggle-accessibility" aria-label="Toggle accessibility controls">
             <span aria-hidden="true">♿</span> Accessibility
@@ -24,73 +24,49 @@
         </div>
     </div>
 
-    <header class="site-header">
-        <div class="container">
-            <h1 class="course-title">
-                <a href="../index.html" style="color: white; text-decoration: none;">Technofeminisms in Practice</a>
-            </h1>
-            <nav aria-label="Main navigation">
-                <ul class="main-nav">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#modules">All Modules</a></li>
-                    <li><a href="../index.html#project">Signature Project</a></li>
-                    <li><a href="../resources/readings.html">Resources</a></li>
-                    <li><a href="../resources/glossary.html">Glossary</a></li>
-                </ul>
+    <div class="page-shell">
+        <p class="site-subtitle">WST 6905 course syllabus &mdash; Fall 2026</p>
+
+        <div class="page-body">
+        <nav class="sidebar-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="active"><a href="../schedule.html">Weekly Schedule</a></li>
+                <li><a href="../requirements.html">Course Requirements</a></li>
+                <li><a href="../resources/readings.html">Readings</a></li>
+                <li><a href="../resources/glossary.html">Glossary</a></li>
+                <li><a href="../resources/collaboration.html">Collaborate</a></li>
+            </ul>
+        </nav>
+
+        <div class="column">
+        <main id="main-content">
+            <p class="unit-meta">Week 1 &middot; Aug 25</p>
+            <h1>Introductions &amp; Foundations</h1>
+            <p class="lead">What is technofeminism? Syllabus, method, and the shape of the semester.</p>
+
+            <p>
+                Welcome to WST 6905: Technofeminisms in Practice. This first session orients you to
+                the course&mdash;what technofeminism means, how the semester's single signature
+                project and its two tracks work, and the shape of the weeks ahead. No advance reading
+                is required.
+            </p>
+
+            <h2>This Week</h2>
+            <p>In class: a short framing handout is distributed and discussed.</p>
+
+            <nav class="unit-pagination" aria-label="Week navigation">
+                <span class="prev disabled">&larr; Previous Week</span>
+                <a href="week02.html" class="next">Week 2 &rarr;</a>
+                <a href="../schedule.html" class="index">Weekly Schedule</a>
             </nav>
+        </main>
         </div>
-    </header>
-
-    <main id="main-content" class="week-page">
-        <div class="container">
-            <div class="week-header">
-                <span class="week-number">Week 1 &middot; Aug 25</span>
-                <h2>Introductions &amp; Foundations</h2>
-                <p class="week-subtitle">What is technofeminism? Syllabus, method, and the shape of the semester.</p>
-
-                <div class="week-meta">
-                    <span class="meta-item">No advance reading</span>
-                    <span class="meta-item">In-class framing handout</span>
-                </div>
-            </div>
-
-            <nav class="week-nav" aria-label="Week navigation">
-                <a href="#" class="nav-disabled" aria-disabled="true">← Previous Week</a>
-                <a href="../index.html#modules" class="nav-link">All Modules</a>
-                <a href="week02.html" class="nav-link">Week 2 →</a>
-            </nav>
-
-            <section class="module-section">
-                <h3>Overview</h3>
-                <p>
-                    Welcome to WST 6905: Technofeminisms in Practice. This first session orients you to
-                    the course&mdash;what technofeminism means, how the semester's single signature project
-                    and its two tracks work, and the shape of the weeks ahead. No advance reading is
-                    required.
-                </p>
-            </section>
-
-            <section class="module-section">
-                <h3>This Week</h3>
-                <p>In class: a short framing handout is distributed and discussed.</p>
-            </section>
-
-            <nav class="week-nav week-nav-bottom" aria-label="Week navigation">
-                <a href="#" class="nav-disabled" aria-disabled="true">← Previous Week</a>
-                <a href="../index.html#modules" class="nav-link">All Modules</a>
-                <a href="week02.html" class="nav-link">Week 2 →</a>
-            </nav>
         </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Technofeminisms in Practice | <a href="../index.html">Home</a></p>
-        </div>
-    </footer>
+    </div>
 
     <script src="../js/navigation.js"></script>
-    <script src="../js/progress-tracker.js"></script>
+    <script src="../js/pagination.js"></script>
     <script src="../js/accessibility-controls.js"></script>
 </body>
 </html>

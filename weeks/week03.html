@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/accessibility.css">
     <link rel="stylesheet" href="../css/modules.css">
 </head>
-<body>
+<body data-schedule-url="../schedule.html" data-prev-url="week02.html" data-next-url="week04.html">
     <div id="accessibility-panel" class="accessibility-controls">
         <button id="toggle-accessibility" aria-label="Toggle accessibility controls">
             <span aria-hidden="true">♿</span> Accessibility
@@ -24,88 +24,61 @@
         </div>
     </div>
 
-    <header class="site-header">
-        <div class="container">
-            <h1 class="course-title">
-                <a href="../index.html" style="color: white; text-decoration: none;">Technofeminisms in Practice</a>
-            </h1>
-            <nav aria-label="Main navigation">
-                <ul class="main-nav">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#modules">All Modules</a></li>
-                    <li><a href="../index.html#project">Signature Project</a></li>
-                    <li><a href="../resources/readings.html">Resources</a></li>
-                    <li><a href="../resources/glossary.html">Glossary</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="page-shell">
+        <p class="site-subtitle">WST 6905 course syllabus &mdash; Fall 2026</p>
 
-    <main id="main-content" class="week-page">
-        <div class="container">
-            <div class="week-header">
-                <span class="week-number">Week 3 &middot; Sep 8</span>
-                <h2>Standpoint Theory &amp; Intersectionality</h2>
-                <p class="week-subtitle">Whose knowledge counts, and how intersecting identities shape what a platform "sees."</p>
+        <div class="page-body">
+        <nav class="sidebar-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="active"><a href="../schedule.html">Weekly Schedule</a></li>
+                <li><a href="../requirements.html">Course Requirements</a></li>
+                <li><a href="../resources/readings.html">Readings</a></li>
+                <li><a href="../resources/glossary.html">Glossary</a></li>
+                <li><a href="../resources/collaboration.html">Collaborate</a></li>
+            </ul>
+        </nav>
 
-                <div class="week-meta">
-                    <span class="meta-item">2 readings</span>
+        <div class="column">
+        <main id="main-content">
+            <p class="unit-meta">Week 3 &middot; Sep 8</p>
+            <h1>Standpoint Theory &amp; Intersectionality</h1>
+            <p class="lead">Whose knowledge counts, and how intersecting identities shape what a platform "sees."</p>
+
+            <h2>Readings</h2>
+            <div class="readings-list">
+                <div class="reading-item">
+                    <h4>Collins, Patricia Hill (1986). "Learning from the Outsider Within: The Sociological Significance of Black Feminist Thought."</h4>
+                    <a href="https://www.ias.edu/sites/default/files/sss/pdfs/Crisis-and-Critique-2018-19/collins_black_feminism.pdf" target="_blank" rel="noopener" class="btn btn-small">Access Reading</a>
+                </div>
+                <div class="reading-item">
+                    <h4>Crenshaw, Kimberlé (1989). "Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics."</h4>
+                    <a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1052&context=uclf" target="_blank" rel="noopener" class="btn btn-small">Access Reading</a>
                 </div>
             </div>
 
-            <nav class="week-nav" aria-label="Week navigation">
-                <a href="week02.html" class="nav-link">← Week 2</a>
-                <a href="../index.html#modules" class="nav-link">All Modules</a>
-                <a href="week04.html" class="nav-link">Week 4 →</a>
-            </nav>
-
-            <section class="module-section">
-                <h3>Overview</h3>
-                <p>
-                    Whose knowledge counts, and how intersecting identities shape what a platform "sees."
-                </p>
-            </section>
-
-            <section class="module-section">
-                <h3>📚 Readings</h3>
-                <div class="readings-list">
-                    <div class="reading-item">
-                        <h4>Collins, Patricia Hill (1986). "Learning from the Outsider Within: The Sociological Significance of Black Feminist Thought."</h4>
-                        <a href="https://www.ias.edu/sites/default/files/sss/pdfs/Crisis-and-Critique-2018-19/collins_black_feminism.pdf" target="_blank" rel="noopener" class="btn btn-small">Access Reading</a>
-                    </div>
-                    <div class="reading-item">
-                        <h4>Crenshaw, Kimberlé (1989). "Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics."</h4>
-                        <a href="https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1052&context=uclf" target="_blank" rel="noopener" class="btn btn-small">Access Reading</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="module-section assignment-section">
-                <h3>Reading Response Due</h3>
+            <div class="assignment-section">
+                <h3 style="margin-top:0;">Reading Response Due</h3>
                 <div class="assignment-card">
                     <p>
                         Post a short written response (300&ndash;500 words) before class, plus come
                         prepared for active participation in seminar discussion.
                     </p>
                 </div>
-            </section>
+            </div>
 
-            <nav class="week-nav week-nav-bottom" aria-label="Week navigation">
-                <a href="week02.html" class="nav-link">← Week 2</a>
-                <a href="../index.html#modules" class="nav-link">All Modules</a>
-                <a href="week04.html" class="nav-link">Week 4 →</a>
+            <nav class="unit-pagination" aria-label="Week navigation">
+                <a href="week02.html" class="prev">&larr; Week 2</a>
+                <a href="week04.html" class="next">Week 4 &rarr;</a>
+                <a href="../schedule.html" class="index">Weekly Schedule</a>
             </nav>
+        </main>
         </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Technofeminisms in Practice | <a href="../index.html">Home</a></p>
         </div>
-    </footer>
+    </div>
 
     <script src="../js/navigation.js"></script>
-    <script src="../js/progress-tracker.js"></script>
+    <script src="../js/pagination.js"></script>
     <script src="../js/accessibility-controls.js"></script>
 </body>
 </html>

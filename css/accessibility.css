@@ -132,7 +132,7 @@
    High Contrast Mode Adjustments
    =================================== */
 
-body.high-contrast .module-card {
+body.high-contrast .column {
     border-width: 3px;
 }
 
@@ -151,30 +151,8 @@ body.high-contrast a {
    since default is dark background
    =================================== */
 
-body.dark-mode .site-header {
-    background: linear-gradient(135deg, #6B4E9C 0%, #D4758A 100%);
-}
-
-body.dark-mode .project-section {
-    background: linear-gradient(135deg, #6B4E9C 0%, #D4758A 100%);
-}
-
-body.dark-mode .module-card {
-    background: var(--color-background);
-    border-color: var(--color-border);
-}
-
-body.dark-mode .about-card,
-body.dark-mode .collab-card {
-    background: var(--color-background);
-}
-
-body.dark-mode .theorist-card {
-    background: var(--color-surface);
-}
-
-body.dark-mode .theorist-card:hover {
-    background: var(--color-background);
+body.dark-mode .column {
+    box-shadow: var(--shadow-sm);
 }
 
 /* ===================================
@@ -212,45 +190,11 @@ select:focus {
    =================================== */
 
 /* Adding texture/patterns for colorblind users */
-.module-card.week-intro::after,
-.module-card.week-conclusion::after {
+.schedule-item.completed::after {
     content: '●';
-    position: absolute;
-    top: var(--spacing-xs);
-    right: var(--spacing-xs);
-    font-size: 2rem;
     color: var(--color-accent);
-    opacity: 0.3;
-}
-
-.module-card.theme-algorithms::after {
-    content: '■';
-    position: absolute;
-    top: var(--spacing-xs);
-    right: var(--spacing-xs);
-    font-size: 1.5rem;
-    color: var(--color-algorithms);
-    opacity: 0.3;
-}
-
-.module-card.theme-infrastructure::after {
-    content: '▲';
-    position: absolute;
-    top: var(--spacing-xs);
-    right: var(--spacing-xs);
-    font-size: 1.5rem;
-    color: var(--color-infrastructure);
-    opacity: 0.3;
-}
-
-.module-card.theme-project::after {
-    content: '★';
-    position: absolute;
-    top: var(--spacing-xs);
-    right: var(--spacing-xs);
-    font-size: 1.5rem;
-    color: var(--color-project);
-    opacity: 0.3;
+    opacity: 0.6;
+    margin-left: var(--spacing-xs);
 }
 
 /* ===================================

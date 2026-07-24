@@ -16,17 +16,20 @@ An interactive, accessible, web-based syllabus for a graduate seminar on technof
 
 ```
 /
-├── index.html              # Landing page with course overview
-├── weeks/                  # 15 weekly module pages
+├── index.html              # Home page (course description, objectives, AI policy)
+├── schedule.html           # Weekly Schedule page (ordered list of all 15 weeks)
+├── requirements.html       # Course Requirements & Grading page
+├── weeks/                  # 15 unit (week) pages
 │   ├── week01.html
 │   ├── week02.html
 │   └── ...
 ├── css/
-│   ├── main.css           # Core styles with technofeminist design
+│   ├── main.css           # Core styles: sidebar-nav + column layout, typography
 │   ├── accessibility.css   # Accessibility features
-│   └── modules.css        # Week page specific styles
+│   └── modules.css        # Reusable content components
 ├── js/
-│   ├── navigation.js       # Smooth scrolling, keyboard nav
+│   ├── navigation.js       # Smooth scrolling, keyboard shortcuts, back-to-top
+│   ├── pagination.js       # Left/Right arrow key navigation between weeks
 │   ├── progress-tracker.js # LocalStorage-based progress
 │   └── accessibility-controls.js # Theme, font size, contrast
 ├── resources/
@@ -41,13 +44,15 @@ An interactive, accessible, web-based syllabus for a graduate seminar on technof
 └── README.md              # This file
 ```
 
+The layout (subtitle bar, left sidebar nav, single content column, unit pages with prev/next pagination) is adapted from the [gh-syllabus](https://github.com/jan-martinek/gh-syllabus) template structure, recolored with this project's purple/pink/black/white palette.
+
 ## 🚀 Getting Started
 
 ### Viewing the Site
 
 1. Clone this repository
 2. Open `index.html` in a web browser
-3. Navigate through modules using the homepage or week navigation
+3. Navigate using the sidebar nav (Home, Weekly Schedule, Course Requirements, Readings, Glossary, Collaborate)
 
 ### For Instructors: Customizing the Syllabus
 
