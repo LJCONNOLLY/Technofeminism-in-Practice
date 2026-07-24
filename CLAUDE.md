@@ -25,8 +25,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```
 /
 ├── index.html                    # Landing page
-├── weeks/                        # 14 weekly module pages
-│   ├── week01.html through week14.html
+├── weeks/                        # 15 weekly module pages
+│   ├── week01.html through week15.html
 ├── css/
 │   ├── main.css                  # Core styles, color system, typography
 │   ├── accessibility.css         # Accessibility features (themes, contrast)
@@ -208,7 +208,7 @@ To add actual interactives:
 - **Prioritize podcasts/audiobooks** for accessibility
 - **Multimodal assignment options** (text, audio, video, zine)
 - **Graduate level** assumes background in feminism and intersectionality
-- **Weeks 1 and 14 are "light"** for semester rhythm
+- **Weeks 1 and 15 are "light"** for semester rhythm
 
 ### Reading Citations
 

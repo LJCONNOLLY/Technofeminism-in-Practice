@@ -2,13 +2,13 @@
  * Progress Tracker
  * Technofeminisms in Practice
  *
- * Tracks student progress through the 14-week course
+ * Tracks student progress through the 15-week course
  */
 
 (function() {
     'use strict';
 
-    const TOTAL_WEEKS = 14;
+    const TOTAL_WEEKS = 15;
     const STORAGE_KEY = 'techfem-progress';
 
     // Progress state
