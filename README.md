@@ -145,9 +145,9 @@ Edit CSS custom properties in `/css/main.css`:
 
 ```css
 :root {
-    --color-primary: #6B4E9C;
-    --color-secondary: #D4758A;
-    --color-accent: #F4A261;
+    --color-primary: #B54FD1;
+    --color-secondary: #E0487F;
+    --color-accent: #F2A6D0;
     /* ... */
 }
 ```

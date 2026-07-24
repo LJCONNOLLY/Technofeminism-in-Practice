@@ -51,16 +51,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Design System
 
-**Color Palette** (defined in `css/main.css` CSS custom properties):
-- `--color-primary`: #6B4E9C (deep purple)
-- `--color-secondary`: #D4758A (warm rose)
-- `--color-accent`: #F4A261 (warm orange)
-- Theme-specific colors for algorithmic bias, infrastructure, and project weeks
+**Color Palette** (defined in `css/main.css` CSS custom properties, sampled from the Orion Nebula):
+- `--color-primary`: #B54FD1 (nebula violet-magenta)
+- `--color-secondary`: #E0487F (nebula rose-crimson)
+- `--color-accent`: #F2A6D0 (soft pink-white core glow)
+- `--color-background`: #000000 (deep space black), `--color-text`/`--color-border`: #FFFFFF (starlight white)
+- Light mode (`body.dark-mode`) uses deeper, more saturated versions of the same hues for contrast against a white surface
 
 **Typography**:
-- Primary font: Georgia (serif) for headings
-- Secondary font: System font stack for body text
-- Base size: 18px, adjustable via accessibility controls
+- Primary and secondary font: Times New Roman (serif) throughout
+- Base size: 24px, adjustable via accessibility controls
 
 **Spacing System**: Consistent spacing scale using CSS custom properties
 (`--spacing-xs` through `--spacing-xl`)
@@ -104,16 +104,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Modifying the Color Scheme
 
-Edit CSS custom properties in `/css/main.css` starting around line 20:
+Edit CSS custom properties in `/css/main.css` starting around line 15:
 ```css
 :root {
-    --color-primary: #6B4E9C;
-    --color-secondary: #D4758A;
+    --color-primary: #B54FD1;
+    --color-secondary: #E0487F;
     /* etc. */
 }
 ```
 
-Dark mode overrides are in `body.dark-mode` block (line ~55).
+Light mode overrides are in the `body.dark-mode` block (same file). Note: hex values also appear as hardcoded `rgba()` glow/shadow literals throughout `main.css` (button shadows, text-shadows, the star-grid background) — update those alongside the named variables if you change the palette.
 
 ### Embedding Collaboration Tools
 
