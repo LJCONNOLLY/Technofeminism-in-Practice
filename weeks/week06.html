@@ -3,101 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6: Automating Inequality | Technofeminisms in Practice</title>
+    <meta name="description" content="Week 6: Automating Inequality & Race After Technology - Technofeminisms in Practice">
+    <title>Week 6: Automating Inequality &amp; Race After Technology | Technofeminisms in Practice</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/accessibility.css">
     <link rel="stylesheet" href="../css/modules.css">
 </head>
 <body>
     <div id="accessibility-panel" class="accessibility-controls">
-        <button id="toggle-accessibility">♿ Accessibility</button>
+        <button id="toggle-accessibility" aria-label="Toggle accessibility controls">
+            <span aria-hidden="true">♿</span> Accessibility
+        </button>
         <div id="accessibility-options" class="hidden">
-            <button id="toggle-theme">🌓 Dark/Light Mode</button>
-            <button id="increase-font">A+</button>
-            <button id="decrease-font">A-</button>
-            <button id="toggle-contrast">High Contrast</button>
+            <button id="toggle-theme" aria-label="Toggle dark/light mode">
+                <span class="theme-icon">🌓</span> Dark/Light Mode
+            </button>
+            <button id="increase-font" aria-label="Increase font size">A+</button>
+            <button id="decrease-font" aria-label="Decrease font size">A-</button>
+            <button id="toggle-contrast" aria-label="Toggle high contrast">High Contrast</button>
         </div>
     </div>
+
     <header class="site-header">
         <div class="container">
-            <h1 class="course-title"><a href="../index.html" style="color: white; text-decoration: none;">Technofeminisms in Practice</a></h1>
-            <nav><ul class="main-nav"><li><a href="../index.html">Home</a></li><li><a href="../index.html#modules">All Modules</a></li></ul></nav>
+            <h1 class="course-title">
+                <a href="../index.html" style="color: white; text-decoration: none;">Technofeminisms in Practice</a>
+            </h1>
+            <nav aria-label="Main navigation">
+                <ul class="main-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#modules">All Modules</a></li>
+                    <li><a href="../index.html#project">Signature Project</a></li>
+                    <li><a href="../resources/readings.html">Resources</a></li>
+                    <li><a href="../resources/glossary.html">Glossary</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+
     <main id="main-content" class="week-page">
         <div class="container">
             <div class="week-header">
-                <span class="week-number">Week 6</span>
-                <h2>Automating Inequality</h2>
-                <p class="week-subtitle">Algorithmic decision-making in public services</p>
+                <span class="week-number">Week 6 &middot; Sep 29</span>
+                <h2>Automating Inequality &amp; Race After Technology</h2>
+                <p class="week-subtitle">Algorithmic decision-making in public services and the poverty-management tradition it extends, alongside the framework of the "New Jim Code."</p>
+
                 <div class="week-meta">
-                    <span class="meta-item">3 readings</span>
-                    <span class="meta-item">Data visualization</span>
-                    <span class="meta-item">~5 hours</span>
+                    <span class="meta-item">2 readings</span>
                 </div>
             </div>
-            <nav class="week-nav">
+
+            <nav class="week-nav" aria-label="Week navigation">
                 <a href="week05.html" class="nav-link">← Week 5</a>
                 <a href="../index.html#modules" class="nav-link">All Modules</a>
                 <a href="week07.html" class="nav-link">Week 7 →</a>
             </nav>
+
             <section class="module-section">
-                <h3>Learning Objectives</h3>
-                <ul class="objectives-list">
-                    <li>Examine algorithmic systems in welfare, housing, and criminal justice</li>
-                    <li>Understand how automation disproportionately harms marginalized communities</li>
-                    <li>Analyze the political economy of algorithmic governance</li>
-                    <li>Identify resistance strategies and alternatives</li>
-                </ul>
+                <h3>Overview</h3>
+                <p>
+                    Algorithmic decision-making in public services and the poverty-management
+                    tradition it extends, alongside the framework of the "New Jim Code."
+                </p>
             </section>
+
             <section class="module-section">
                 <h3>📚 Readings</h3>
                 <div class="readings-list">
                     <div class="reading-item">
-                        <h4>Eubanks, Virginia (2018). Automating Inequality.</h4>
-                        <p>St. Martin's Press. <strong>Read:</strong> Introduction + Chapter 1 or 2</p>
-                        <p class="reading-note">Eubanks documents how algorithmic tools harm poor and working-class people.</p>
-                        <a href="#" class="btn btn-small">Access Reading</a>
+                        <h4>Eubanks, Virginia. <em>Automating Inequality</em>, Ch. 1 and one case chapter (assigned).</h4>
+                        <p class="reading-note">Available via course reserves.</p>
                     </div>
                     <div class="reading-item">
-                        <h4>O'Neil, Cathy (2016). "Arms Race: Going to College."</h4>
-                        <p>From <em>Weapons of Math Destruction</em>. Crown, Chapter 2.</p>
-                        <p class="reading-note">Algorithmic systems in higher education admissions and ranking.</p>
-                        <a href="#" class="btn btn-small">Access Reading</a>
-                    </div>
-                    <div class="reading-item">
-                        <h4>Brayne, Sarah (2017). "Big Data Surveillance: The Case of Policing."</h4>
-                        <p><em>American Sociological Review</em>, 82(5), 977-1008.</p>
-                        <p class="reading-note">How predictive policing algorithms entrench racial disparities.</p>
-                        <a href="#" class="btn btn-small">Access Reading</a>
+                        <h4>Benjamin, Ruha. <em>Race After Technology</em>, Introduction.</h4>
+                        <p class="reading-note">Available via course reserves.</p>
                     </div>
                 </div>
             </section>
-            <section class="module-section">
-                <h3>Interactive Data Visualization</h3>
-                <div class="interactive-element">
-                    <h4>Explore Algorithmic Decision-Making Data</h4>
-                    <p>Interactive visualization showing disparate impacts of automated systems across welfare, housing, and criminal justice.</p>
-                    <div class="embed-placeholder">[Data visualization would be embedded here]</div>
-                    <a href="#" class="btn btn-primary">Launch Visualization</a>
-                </div>
-            </section>
+
             <section class="module-section assignment-section">
-                <h3>Assignment</h3>
+                <h3>Reading Response Due</h3>
                 <div class="assignment-card">
-                    <p><strong>Map an algorithmic system:</strong> Research how algorithms are used in one public service domain (welfare, criminal justice, housing, education). Who is affected? How?</p>
-                    <p><strong>Due:</strong> End of Week 6 | <strong>Format:</strong> 4 pages or video essay</p>
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <p>
+                        Post a short written response (300&ndash;500 words) before class, plus come
+                        prepared for active participation in seminar discussion.
+                    </p>
                 </div>
             </section>
-            <nav class="week-nav week-nav-bottom">
+
+            <nav class="week-nav week-nav-bottom" aria-label="Week navigation">
                 <a href="week05.html" class="nav-link">← Week 5</a>
                 <a href="../index.html#modules" class="nav-link">All Modules</a>
                 <a href="week07.html" class="nav-link">Week 7 →</a>
             </nav>
         </div>
     </main>
-    <footer class="site-footer"><div class="container"><p>&copy; 2025 Technofeminisms in Practice</p></div></footer>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Technofeminisms in Practice | <a href="../index.html">Home</a></p>
+        </div>
+    </footer>
+
     <script src="../js/navigation.js"></script>
     <script src="../js/progress-tracker.js"></script>
     <script src="../js/accessibility-controls.js"></script>

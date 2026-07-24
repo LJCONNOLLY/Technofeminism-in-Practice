@@ -4,10 +4,10 @@ An interactive, accessible, web-based syllabus for a graduate seminar on technof
 
 ## 🌟 Features
 
-- **14-Week Interactive Curriculum** covering feminist STS, algorithmic bias, embodied interaction, data colonialism, and design justice
+- **15-Week Interactive Curriculum** covering feminist STS, algorithmic bias, embodied interaction, data colonialism, and design justice
+- **Two-Track Signature Project** (Critical Platform Audit or Feminist Platform Design with Claude Code)
 - **Accessibility-First Design** with WCAG 2.1 AA compliance, dark/light modes, keyboard navigation, and screen reader support
 - **Progress Tracking** using localStorage to monitor student completion
-- **Multiple Format Options** for assignments (written, audio, video, zine)
 - **Collaborative Learning Spaces** with embedded tools (Padlet, Google Docs, Miro, Google Forms)
 - **Responsive Design** works on desktop, tablet, and mobile devices
 - **Open Source** under Creative Commons BY-NC-SA 4.0
@@ -17,7 +17,7 @@ An interactive, accessible, web-based syllabus for a graduate seminar on technof
 ```
 /
 ├── index.html              # Landing page with course overview
-├── weeks/                  # 14 weekly module pages
+├── weeks/                  # 15 weekly module pages
 │   ├── week01.html
 │   ├── week02.html
 │   └── ...
@@ -111,21 +111,26 @@ This syllabus embodies technofeminist design principles:
 1. **Week 1**: Introductions & Foundations (light)
 2. **Week 2**: Haraway's Cyborgs & Situated Knowledges
 3. **Week 3**: Standpoint Theory & Intersectionality
-4. **Week 4**: Embodied Interaction
-5. **Week 5**: Algorithms of Oppression (with search audit case study)
-6. **Week 6**: Automating Inequality
-7. **Week 7**: Coded Bias (with documentary)
-8. **Week 8**: Platform Capitalism & Gendered Labor
-9. **Week 9**: Data Colonialism & Surveillance
-10. **Week 10**: AI Ethics & Accountability (with branching narrative)
-11. **Week 11**: Platform Audit Workshops
-12. **Week 12**: Presenting Findings
-13. **Week 13**: Reimagining - Design Justice
-14. **Week 14**: Building Technofeminist Futures (light)
+4. **Week 4**: Embodied Interaction & Interface Design
+5. **Week 5**: Algorithms of Oppression
+6. **Week 6**: Automating Inequality & Race After Technology
+7. **Week 7**: Gender Shades
+8. **Week 8**: Design Justice (in-class design/audit workshop)
+9. **Week 9**: Glitch Feminism & Programmed Inequality
+10. **Week 10**: Platform Capitalism & Gendered Labor
+11. **Week 11**: Data Colonialism & Surveillance (Signature Project Proposal due)
+12. **Week 12**: AI Ethics & Accountability (branching scenario activity)
+13. **Week 13**: One-on-One Conferences
+14. **Week 14**: Presenting Findings (Presentation & Peer Feedback due)
+15. **Week 15**: Building Technofeminist Futures (light; Final Signature Project & Reflection due)
+
+### Signature Project
+
+A single semester-long project with two tracks: **Critical Platform Audit** (a theoretical audit of an existing platform or algorithm) or **Feminist Platform Design** (a working prototype built with Claude Code).
 
 ### Key Theorists
 
-Donna Haraway • Safiya Noble • Ruha Benjamin • Virginia Eubanks • Joy Buolamwini • Sasha Costanza-Chock • Legacy Russell • Mar Hicks • Lisa Nakamura • Wendy Chun • and more
+Donna Haraway • Safiya Noble • Ruha Benjamin • Virginia Eubanks • Joy Buolamwini • Sasha Costanza-Chock • Legacy Russell • Mar Hicks
 
 ## 🔧 Customization Guide
 
