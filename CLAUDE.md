@@ -40,14 +40,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 │   └── accessibility-controls.js # Theme toggle, font size, high contrast
 ├── resources/
 │   ├── glossary.html            # Technofeminist terminology
-│   ├── readings.html            # Complete reading list
-│   └── collaboration.html       # Collaboration tools guide
+│   └── readings.html            # Complete reading list
 ├── assets/                      # Images, data, embeds (placeholders)
 ├── README.md                    # Project documentation
 └── CLAUDE.md                    # This file
 ```
 
-**Site structure**: the layout (subtitle bar + left sidebar nav + single content column, with unit pages using bottom prev/next pagination) is adapted from the [gh-syllabus](https://github.com/jan-martinek/gh-syllabus) template structure, recolored with this project's purple/pink/black/white palette. Site navigation lives in `.sidebar-nav` on every page (Home, Weekly Schedule, Course Requirements, Readings, Glossary, Collaborate) — there is no single-page landing grid anymore; each top-level page is its own file.
+**Site structure**: the layout (subtitle bar + left sidebar nav + single content column, with unit pages using bottom prev/next pagination) is adapted from the [gh-syllabus](https://github.com/jan-martinek/gh-syllabus) template structure, recolored with this project's purple/pink/black/white palette. Site navigation lives in `.sidebar-nav` on every page (Home, Weekly Schedule, Course Requirements, Readings, Glossary) — there is no single-page landing grid anymore; each top-level page is its own file.
 
 ### Design System
 
@@ -114,25 +113,6 @@ Edit CSS custom properties in `/css/main.css` starting around line 15:
 ```
 
 Light mode overrides are in the `body.dark-mode` block (same file). Note: hex values also appear as hardcoded `rgba()` glow/shadow literals throughout `main.css` (button shadows, text-shadows, the star-grid background) — update those alongside the named variables if you change the palette.
-
-### Embedding Collaboration Tools
-
-Collaboration tool links are placeholders (anchor tags with `href="#"`). To activate:
-
-1. Create actual tools (Padlet, Google Docs, Miro, Google Forms)
-2. Replace `href="#"` with actual URLs in:
-   - `index.html` (collaboration section, ~line 245)
-   - Individual week pages (in discussion/activity sections)
-   - `resources/collaboration.html`
-
-**Example**:
-```html
-<!-- Before -->
-<a href="#" class="btn btn-primary">Access Padlet</a>
-
-<!-- After -->
-<a href="https://padlet.com/username/week1-reflections" class="btn btn-primary">Access Padlet</a>
-```
 
 ### Adding Interactive Elements
 

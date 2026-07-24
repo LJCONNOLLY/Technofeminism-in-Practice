@@ -34,8 +34,7 @@ An interactive, accessible, web-based syllabus for a graduate seminar on technof
 │   └── accessibility-controls.js # Theme, font size, contrast
 ├── resources/
 │   ├── glossary.html      # Key terms and concepts
-│   ├── readings.html      # Complete reading list
-│   └── collaboration.html # Collaboration tools guide
+│   └── readings.html      # Complete reading list
 ├── assets/
 │   ├── images/
 │   ├── data/
@@ -52,17 +51,14 @@ The layout (subtitle bar, left sidebar nav, single content column, unit pages wi
 
 1. Clone this repository
 2. Open `index.html` in a web browser
-3. Navigate using the sidebar nav (Home, Weekly Schedule, Course Requirements, Readings, Glossary, Collaborate)
+3. Navigate using the sidebar nav (Home, Weekly Schedule, Course Requirements, Readings, Glossary)
 
 ### For Instructors: Customizing the Syllabus
 
 1. **Update Readings**: Edit reading lists in each `weeks/weekXX.html` file
-2. **Add Collaboration Tools**:
-   - Create Padlet boards, Google Docs, Miro boards
-   - Replace placeholder links in week pages and `resources/collaboration.html`
-3. **Modify Content**: All content is in standard HTML files—edit directly
-4. **Add Resources**: Expand `resources/glossary.html` and `resources/readings.html`
-5. **Configure Uploads**: Set up Google Forms with file upload for multimodal reflections
+2. **Modify Content**: All content is in standard HTML files—edit directly
+3. **Add Resources**: Expand `resources/glossary.html` and `resources/readings.html`
+4. **Configure Uploads**: Set up Google Forms with file upload for reading responses and projects
 
 ### Deploying to GitHub Pages
 
