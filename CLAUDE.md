@@ -235,7 +235,6 @@ All assignments should offer multiple format options:
 - Use "students" not "users"
 - Avoid gendered language ("they" not "he/she")
 - Center marginalized perspectives in examples
-- Acknowledge land/labor in footer
 
 ## Troubleshooting
 
