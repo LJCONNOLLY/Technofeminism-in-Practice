@@ -40,27 +40,26 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 │   └── accessibility-controls.js # Theme toggle, font size, high contrast
 ├── resources/
 │   ├── glossary.html            # Technofeminist terminology
-│   ├── readings.html            # Complete reading list
-│   └── collaboration.html       # Collaboration tools guide
+│   └── readings.html            # Complete reading list
 ├── assets/                      # Images, data, embeds (placeholders)
 ├── README.md                    # Project documentation
 └── CLAUDE.md                    # This file
 ```
 
-**Site structure**: the layout (subtitle bar + left sidebar nav + single content column, with unit pages using bottom prev/next pagination) is adapted from the [gh-syllabus](https://github.com/jan-martinek/gh-syllabus) template structure, recolored with this project's purple/pink/black/white palette. Site navigation lives in `.sidebar-nav` on every page (Home, Weekly Schedule, Course Requirements, Readings, Glossary, Collaborate) — there is no single-page landing grid anymore; each top-level page is its own file.
+**Site structure**: the layout (subtitle bar + left sidebar nav + single content column, with unit pages using bottom prev/next pagination) is adapted from the [gh-syllabus](https://github.com/jan-martinek/gh-syllabus) template structure, recolored with this project's purple/pink/black/white palette. Site navigation lives in `.sidebar-nav` on every page (Home, Weekly Schedule, Course Requirements, Readings, Glossary) — there is no single-page landing grid anymore; each top-level page is its own file.
 
 ### Design System
 
-**Color Palette** (defined in `css/main.css` CSS custom properties):
-- `--color-primary`: #6B4E9C (deep purple)
-- `--color-secondary`: #D4758A (warm rose)
-- `--color-accent`: #F4A261 (warm orange)
-- Theme-specific colors for algorithmic bias, infrastructure, and project weeks
+**Color Palette** (defined in `css/main.css` CSS custom properties, sampled from the Orion Nebula):
+- `--color-primary`: #B54FD1 (nebula violet-magenta)
+- `--color-secondary`: #E0487F (nebula rose-crimson)
+- `--color-accent`: #F2A6D0 (soft pink-white core glow)
+- `--color-background`: #000000 (deep space black), `--color-text`/`--color-border`: #FFFFFF (starlight white)
+- Light mode (`body.dark-mode`) uses deeper, more saturated versions of the same hues for contrast against a white surface
 
 **Typography**:
-- Primary font: Georgia (serif) for headings
-- Secondary font: System font stack for body text
-- Base size: 18px, adjustable via accessibility controls
+- Primary and secondary font: Times New Roman (serif) throughout
+- Base size: 24px, adjustable via accessibility controls
 
 **Spacing System**: Consistent spacing scale using CSS custom properties
 (`--spacing-xs` through `--spacing-xl`)
@@ -104,35 +103,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Modifying the Color Scheme
 
-Edit CSS custom properties in `/css/main.css` starting around line 20:
+Edit CSS custom properties in `/css/main.css` starting around line 15:
 ```css
 :root {
-    --color-primary: #6B4E9C;
-    --color-secondary: #D4758A;
+    --color-primary: #B54FD1;
+    --color-secondary: #E0487F;
     /* etc. */
 }
 ```
 
-Dark mode overrides are in `body.dark-mode` block (line ~55).
-
-### Embedding Collaboration Tools
-
-Collaboration tool links are placeholders (anchor tags with `href="#"`). To activate:
-
-1. Create actual tools (Padlet, Google Docs, Miro, Google Forms)
-2. Replace `href="#"` with actual URLs in:
-   - `index.html` (collaboration section, ~line 245)
-   - Individual week pages (in discussion/activity sections)
-   - `resources/collaboration.html`
-
-**Example**:
-```html
-<!-- Before -->
-<a href="#" class="btn btn-primary">Access Padlet</a>
-
-<!-- After -->
-<a href="https://padlet.com/username/week1-reflections" class="btn btn-primary">Access Padlet</a>
-```
+Light mode overrides are in the `body.dark-mode` block (same file). Note: hex values also appear as hardcoded `rgba()` glow/shadow literals throughout `main.css` (button shadows, text-shadows, the star-grid background) — update those alongside the named variables if you change the palette.
 
 ### Adding Interactive Elements
 
@@ -235,7 +215,6 @@ All assignments should offer multiple format options:
 - Use "students" not "users"
 - Avoid gendered language ("they" not "he/she")
 - Center marginalized perspectives in examples
-- Acknowledge land/labor in footer
 
 ## Troubleshooting
 
