@@ -24,16 +24,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```
 /
-├── index.html                    # Landing page
-├── weeks/                        # 15 weekly module pages
+├── index.html                    # Home page (course description, objectives, AI policy)
+├── schedule.html                 # Weekly Schedule page (ordered list of all 15 weeks + progress tracker)
+├── requirements.html             # Course Requirements & Grading page (rubric, late policy, grading scale)
+├── weeks/                        # 15 unit (week) pages
 │   ├── week01.html through week15.html
 ├── css/
-│   ├── main.css                  # Core styles, color system, typography
+│   ├── main.css                  # Core styles, color system, sidebar-nav/column layout, typography
 │   ├── accessibility.css         # Accessibility features (themes, contrast)
-│   └── modules.css              # Week-specific page styles
+│   └── modules.css              # Reusable content components (readings, glossary terms, callouts)
 ├── js/
-│   ├── navigation.js             # Smooth scroll, keyboard nav, back-to-top
-│   ├── progress-tracker.js       # LocalStorage-based progress tracking
+│   ├── navigation.js             # Smooth scroll, keyboard shortcuts, back-to-top
+│   ├── pagination.js             # Left/Right arrow key navigation between week pages
+│   ├── progress-tracker.js       # LocalStorage-based progress tracking (schedule.html)
 │   └── accessibility-controls.js # Theme toggle, font size, high contrast
 ├── resources/
 │   ├── glossary.html            # Technofeminist terminology
@@ -43,6 +46,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ├── README.md                    # Project documentation
 └── CLAUDE.md                    # This file
 ```
+
+**Site structure**: the layout (subtitle bar + left sidebar nav + single content column, with unit pages using bottom prev/next pagination) is adapted from the [gh-syllabus](https://github.com/jan-martinek/gh-syllabus) template structure, recolored with this project's purple/pink/black/white palette. Site navigation lives in `.sidebar-nav` on every page (Home, Weekly Schedule, Course Requirements, Readings, Glossary, Collaborate) — there is no single-page landing grid anymore; each top-level page is its own file.
 
 ### Design System
 
@@ -91,11 +96,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Adding a New Week
 
-1. Copy an existing week file: `cp weeks/week02.html weeks/week15.html`
-2. Update the week number, title, and content in the new file
-3. Add the week to the modules grid in `index.html` (line ~180)
-4. Update previous/next navigation links in adjacent weeks
-5. Test progress tracking still works with new week count
+1. Copy an existing week file: `cp weeks/week14.html weeks/week16.html`
+2. Update the week number, date, title, and content in the new file (including `data-prev-url`/`data-next-url` on `<body>`)
+3. Add the week to the ordered list in `schedule.html`
+4. Update previous/next pagination links in adjacent week files
+5. Update `TOTAL_WEEKS` in `js/progress-tracker.js` and the week count text in `schedule.html`
 
 ### Modifying the Color Scheme
 

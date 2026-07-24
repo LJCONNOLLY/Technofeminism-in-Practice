@@ -58,26 +58,26 @@
     }
 
     /**
-     * Initialize progress tracking on module cards
+     * Initialize progress tracking on the weekly schedule list
      */
     function initializeProgressTracking() {
-        const moduleCards = document.querySelectorAll('.module-card');
+        const scheduleItems = document.querySelectorAll('.schedule-item');
 
-        moduleCards.forEach((card, index) => {
+        scheduleItems.forEach((item, index) => {
             const weekNumber = index + 1;
 
             // Add completion checkbox
             const checkbox = createCompletionCheckbox(weekNumber);
-            card.appendChild(checkbox);
+            item.appendChild(checkbox);
 
             // Mark as visited when clicked
-            card.addEventListener('click', function() {
+            item.addEventListener('click', function() {
                 markWeekAsVisited(weekNumber);
             });
 
             // Visual indicator for completed weeks
             if (progress.completedWeeks.includes(weekNumber)) {
-                card.classList.add('completed');
+                item.classList.add('completed');
             }
         });
     }
@@ -126,13 +126,13 @@
         saveProgress();
         updateProgressDisplay();
 
-        // Update card visual state
-        const card = document.querySelector(`.module-card:nth-child(${weekNumber})`);
-        if (card) {
+        // Update schedule item visual state
+        const item = document.querySelector(`.schedule-item:nth-child(${weekNumber})`);
+        if (item) {
             if (isComplete) {
-                card.classList.add('completed');
+                item.classList.add('completed');
             } else {
-                card.classList.remove('completed');
+                item.classList.remove('completed');
             }
         }
 

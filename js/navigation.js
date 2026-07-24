@@ -2,7 +2,7 @@
  * Navigation System
  * Technofeminisms in Practice
  *
- * Manages smooth scrolling, active states, and keyboard navigation
+ * Manages smooth in-page scrolling, keyboard shortcuts, and back-to-top button
  */
 
 (function() {
@@ -10,13 +10,11 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         initializeSmoothScrolling();
-        initializeActiveNavStates();
         initializeKeyboardNavigation();
-        initializeMobileMenu();
     });
 
     /**
-     * Initialize smooth scrolling for anchor links
+     * Initialize smooth scrolling for in-page anchor links
      */
     function initializeSmoothScrolling() {
         const links = document.querySelectorAll('a[href^="#"]');
@@ -36,18 +34,11 @@
                 if (target) {
                     e.preventDefault();
 
-                    // Get header height for offset
-                    const header = document.querySelector('.site-header');
-                    const headerHeight = header ? header.offsetHeight : 0;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-
-                    // Smooth scroll
                     window.scrollTo({
-                        top: targetPosition,
+                        top: target.offsetTop - 20,
                         behavior: 'smooth'
                     });
 
-                    // Update URL without jumping
                     if (history.pushState) {
                         history.pushState(null, null, href);
                     }
@@ -61,87 +52,41 @@
     }
 
     /**
-     * Update active navigation states based on scroll position
-     */
-    function initializeActiveNavStates() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
-
-        if (sections.length === 0 || navLinks.length === 0) return;
-
-        function updateActiveNav() {
-            const scrollPosition = window.scrollY + 100;
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.removeAttribute('aria-current');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.setAttribute('aria-current', 'location');
-                        }
-                    });
-                }
-            });
-        }
-
-        // Throttle scroll events for performance
-        let ticking = false;
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                window.requestAnimationFrame(function() {
-                    updateActiveNav();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        // Initial check
-        updateActiveNav();
-    }
-
-    /**
      * Initialize keyboard navigation enhancements
      */
     function initializeKeyboardNavigation() {
-        // Navigate modules with arrow keys
-        const moduleCards = Array.from(document.querySelectorAll('.module-card'));
+        // Navigate the weekly schedule list with arrow keys
+        const scheduleLinks = Array.from(document.querySelectorAll('.schedule-item a'));
 
-        moduleCards.forEach((card, index) => {
-            card.addEventListener('keydown', function(e) {
+        scheduleLinks.forEach((link, index) => {
+            link.addEventListener('keydown', function(e) {
                 let targetIndex;
 
-                switch(e.key) {
-                    case 'ArrowRight':
+                switch (e.key) {
                     case 'ArrowDown':
                         e.preventDefault();
                         targetIndex = index + 1;
-                        if (targetIndex < moduleCards.length) {
-                            moduleCards[targetIndex].focus();
+                        if (targetIndex < scheduleLinks.length) {
+                            scheduleLinks[targetIndex].focus();
                         }
                         break;
 
-                    case 'ArrowLeft':
                     case 'ArrowUp':
                         e.preventDefault();
                         targetIndex = index - 1;
                         if (targetIndex >= 0) {
-                            moduleCards[targetIndex].focus();
+                            scheduleLinks[targetIndex].focus();
                         }
                         break;
 
                     case 'Home':
                         e.preventDefault();
-                        moduleCards[0].focus();
+                        scheduleLinks[0].focus();
                         break;
 
                     case 'End':
                         e.preventDefault();
-                        moduleCards[moduleCards.length - 1].focus();
+                        scheduleLinks[scheduleLinks.length - 1].focus();
                         break;
                 }
             });
@@ -159,25 +104,15 @@
                 }
             }
 
-            // Alt + M: Focus on modules
+            // Alt + M: Jump to the weekly schedule page
             if (e.altKey && e.key === 'm') {
                 e.preventDefault();
-                const modulesSection = document.getElementById('modules');
-                if (modulesSection) {
-                    modulesSection.scrollIntoView({ behavior: 'smooth' });
-                    modulesSection.setAttribute('tabindex', '-1');
-                    modulesSection.focus();
+                const scheduleUrl = document.body.getAttribute('data-schedule-url');
+                if (scheduleUrl) {
+                    window.location.href = scheduleUrl;
                 }
             }
         });
-    }
-
-    /**
-     * Initialize mobile menu (if needed in the future)
-     */
-    function initializeMobileMenu() {
-        // Placeholder for mobile menu functionality
-        // Can be expanded if hamburger menu is added
     }
 
     /**
